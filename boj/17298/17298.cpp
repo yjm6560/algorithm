@@ -11,41 +11,41 @@ using namespace std;
 
 vector<int> solve(int n, vector<int> nums)
 {
-	vector<int> answer(n, -1);
-	vector<int> stack;
-	for(int i=0;i<nums.size();i++)
-	{
-		while(!stack.empty() && nums[stack.back()] < nums[i])
-		{
-			answer[stack.back()] = nums[i];
-			stack.pop_back();
-		}
-		stack.push_back(i);
-	}
+    vector<int> answer(n, -1);
+    vector<int> stack;
+    for(int i=0;i<nums.size();i++)
+    {
+        while(!stack.empty() && nums[stack.back()] < nums[i])
+        {
+            answer[stack.back()] = nums[i];
+            stack.pop_back();
+        }
+        stack.push_back(i);
+    }
 
-	return answer;
+    return answer;
 }
 int main()
 {
-	ios::sync_with_stdio(0);
-	cin.tie(0);
-	cout.tie(0);
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
 
-	int n;
-	cin >> n;
-	vector<int> nums(n);
-	for(int i=0;i<n;i++)
-	{
-		cin >> nums[i];
-	}
+    int n;
+    cin >> n;
+    vector<int> nums(n);
+    for(int i=0;i<n;i++)
+    {
+        cin >> nums[i];
+    }
 
-	vector<int> result = solve(n, nums);
+    vector<int> result = solve(n, nums);
 
-	for(auto val : result)
-	{
-		cout << val << " ";
-	}
-	cout << "\n";
+    for(auto val : result)
+    {
+        cout << val << " ";
+    }
+    cout << "\n";
 
-	return 0;
+    return 0;
 }
