@@ -1,10 +1,8 @@
-#!bin/bash
-
 print_usage()
 {
-echo Usage:
-echo ${0} [PROBLEM NUMBER]
-exit 1
+	echo Usage:
+	echo ${0} [PROBLEM NUMBER]
+	exit 1
 }
 
 if [ $# -ne 1 ]; then
@@ -25,7 +23,7 @@ else
 fi
 
 if [ ! -e $PROBLEM_NO/$PROBLEM_NO.cpp ]; then
-	echo make sample src file
+	echo make sample src file $PROBLEM_NO/$PROBLEM_NO.cpp
 	cp boilerPlate.cpp $PROBLEM_NO/$PROBLEM_NO.cpp
 else
 	echo $PROBLEM_NO/$PROBLEM_NO.cpp already exists
