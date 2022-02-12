@@ -2,6 +2,7 @@
 algorithm
 
 # INSTALL
+### COMMON
 ```bash
 ./init.sh [rc file path]
 # rc file example : ~/.bashrc, ~/.zshrc, ~/.cshrc etc...
