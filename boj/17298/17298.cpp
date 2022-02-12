@@ -1,3 +1,8 @@
+/*
+ * vim 설정
+ * vim:ts=4:shiftwidth=4:et:cindent:fileencoding=utf-8:
+ */
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
